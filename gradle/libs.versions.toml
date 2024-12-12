@@ -1,0 +1,67 @@
+[versions]
+activityCompose = "1.9.3"
+agp = "8.7.2"
+composeBom = "2024.10.01"
+coreKtx = "1.15.0"
+espressoCore = "3.6.1"
+firebaseBom = "33.5.1"
+firebaseCrashlytics = "3.0.2"
+firebasePerf = "1.4.2"
+gms = "4.4.2"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+koinAnnotation = "2.0.0-Beta1"
+koinBom = "4.0.0"
+kotlin = "2.0.0"
+kotlinxCoroutinesAndroid = "1.9.0"
+ksp = "2.0.20-1.0.25"
+lifecycleRuntimeKtx = "2.8.7"
+mockk = "1.13.13"
+timber = "5.0.1"
+uiTextGoogleFonts = "1.7.5"
+# TODO: check for unused dependecies
+[libraries]
+# Core
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "kotlinxCoroutinesAndroid" }
+# Koin (DI)
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koinBom" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose"}
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koinAnnotation"}
+koin-core = { module = "io.insert-koin:koin-core"}
+koin-ksp = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koinAnnotation"}
+koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4"}
+# Firebase
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-perf = { module = "com.google.firebase:firebase-perf" }
+# Other 3rd-party
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockk" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+gms-google-services = { id = "com.google.gms.google-services", version.ref = "gms" }
+google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlytics" }
+google-firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "firebasePerf" }
